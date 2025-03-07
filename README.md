@@ -19,3 +19,14 @@ A lightweight, single-file student portal built with HTML, CSS, and JavaScript. 
 - Any modern web browser (Chrome, Firefox, Safari, Edge)
 - No additional software or dependencies required
 
+### Installation
+
+1. Clone the repository or download the HTML file
+   ```
+   git clone https://github.com/yourusername/student-portal.git
+   ```
+   
+2. Open the `index.html` file in your web browser
+
+That's it! No build process, no dependencies to install.
+
