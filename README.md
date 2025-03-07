@@ -30,3 +30,10 @@ A lightweight, single-file student portal built with HTML, CSS, and JavaScript. 
 
 That's it! No build process, no dependencies to install.
 
+## Usage
+
+1. Open the application in your browser
+2. Enter any username and password to log in (demo mode)
+3. Explore the dashboard with sample student data
+4. Use the "Logout" button to return to the login screen
+
