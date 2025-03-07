@@ -12,3 +12,10 @@ A lightweight, single-file student portal built with HTML, CSS, and JavaScript. 
 - **Assignment Tracking** - Monitor pending and submitted assignments with due dates
 - **Modern UI** - Clean design with cards, shadows, and interactive elements
 
+## Getting Started
+
+### Prerequisites
+
+- Any modern web browser (Chrome, Firefox, Safari, Edge)
+- No additional software or dependencies required
+
