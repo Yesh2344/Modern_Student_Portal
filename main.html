@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal</title>
+  <style>
+    :root { --primary: #4361ee; --dark: #2b2d42; --light: #f8f9fa; --accent: #ef476f; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { background: var(--light); color: var(--dark); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+    header { background: var(--primary); color: white; padding: 1rem 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: white; border-radius: 8px; padding: 1.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.2s; }
+    .card:hover { transform: translateY(-5px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+    .card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+    .card-title { font-size: 1.25rem; font-weight: 600; color: var(--dark); }
+    .btn { background: var(--primary); color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; }
+    .list-item { padding: 0.75rem 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; }
+    .nav { display: flex; gap: 1rem; }
+    .avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; }
+    .badge { background: var(--accent); color: white; padding: 0.25rem 0.5rem; border-radius: 20px; font-size: 0.75rem; }
+    #login-container { display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .login-form { background: white; padding: 2rem; border-radius: 8px; width: 100%; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    .form-group { margin-bottom: 1rem; }
+    input { width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; }
+    .login-btn { width: 100%; background: var(--primary); color: white; padding: 0.75rem; border: none; border-radius: 4px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    const app = document.getElementById('app');
+    const userData = { username: 'student123', name: 'Alex Johnson', courses: ['Mathematics', 'Physics', 'Computer Science'], 
+                       assignments: [{ title: 'Math HW 3', due: '2025-03-10', status: 'Pending' }, 
+                                     { title: 'Physics Lab', due: '2025-03-15', status: 'Submitted' }] };
+    
+    function showLogin() {
+      app.innerHTML = `
+        <div id="login-container">
+          <div class="login-form">
+            <h2 style="margin-bottom: 1.5rem; text-align: center;">Student Portal Login</h2>
+            <div class="form-group">
+              <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button class="login-btn" onclick="login()">Login</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function showDashboard() {
+      app.innerHTML = `
+        <header>
+          <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <h1>Student Portal</h1>
+            <div class="nav">
+              <div class="avatar">${userData.name[0]}</div>
+              <div onclick="showLogin()" style="cursor: pointer;">Logout</div>
+            </div>
+          </div>
+        </header>
+        <div class="container">
+          <h2 style="margin-top: 2rem;">Welcome, ${userData.name}</h2>
+          <div class="dashboard">
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">My Courses</div>
+                <button class="btn">View All</button>
+              </div>
+              <div class="card-content">
+                ${userData.courses.map(course => `<div class="list-item">${course}</div>`).join('')}
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">
+                <div class="card-title">Assignments</div>
+                <button class="btn">New</button>
+              </div>
+              <div class="card-content">
+                ${userData.assignments.map(assignment => `
+                  <div class="list-item">
+                    <div>${assignment.title} <small style="color: #777;">Due: ${assignment.due}</small></div>
+                    <span class="badge">${assignment.status}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      if (username && password) showDashboard();
+    }
+
+    // Initialize app
+    showLogin();
+  </script>
+</body>
+</html>
