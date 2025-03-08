@@ -80,3 +80,11 @@ const userData = {
 - **No External Dependencies:** Everything is contained in a single HTML file
 - **Modern JavaScript:** Uses ES6+ features for clean code
 
+## Future Enhancements
+
+- Add local storage for persistent sessions
+- Implement form validation
+- Add grade reports section
+- Create announcement board
+- Integrate calendar for scheduling
+
