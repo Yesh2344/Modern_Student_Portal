@@ -74,8 +74,9 @@ const userData = {
 };
 ```
 
+## Technical Details
 
+- **Total Size:** Under 100 lines of code (excluding whitespace)
+- **No External Dependencies:** Everything is contained in a single HTML file
+- **Modern JavaScript:** Uses ES6+ features for clean code
 
----
-
-*Last updated: March 7, 2025*
