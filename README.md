@@ -74,28 +74,7 @@ const userData = {
 };
 ```
 
-## Technical Details
 
-- **Total Size:** Under 100 lines of code (excluding whitespace)
-- **No External Dependencies:** Everything is contained in a single HTML file
-- **Modern JavaScript:** Uses ES6+ features for clean code
-
-## Future Enhancements
-
-- Add local storage for persistent sessions
-- Implement form validation
-- Add grade reports section
-- Create announcement board
-- Integrate calendar for scheduling
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Design inspired by modern dashboard UIs
-- Created for educational purposes
 
 ---
 
