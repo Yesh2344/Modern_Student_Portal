@@ -92,3 +92,13 @@ const userData = {
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## Acknowledgments
+
+- Design inspired by modern dashboard UIs
+- Created for educational purposes
+
+---
+
+*Last updated: March 7, 2025*
+
+---
