@@ -102,3 +102,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 *Last updated: March 7, 2025*
 
 ---
+
+## Copyright
+
+All Rights Reserved
