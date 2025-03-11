@@ -97,6 +97,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Design inspired by modern dashboard UIs
 - Created for educational purposes
 
+## Copyright
 ---
 
 *Last updated: March 7, 2025*
