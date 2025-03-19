@@ -2,7 +2,6 @@
 
 A lightweight, single-file student portal built with HTML, CSS, and JavaScript. This application provides a clean, modern interface for students to access their courses and assignments.
 
-![Student Portal Screenshot](https://placeholder-image.com/student-portal-screenshot.png)
 
 ## Features
 
