@@ -22,7 +22,7 @@ A lightweight, single-file student portal built with HTML, CSS, and JavaScript. 
 
 1. Clone the repository or download the HTML file
    ```
-   git clone https://github.com/yourusername/student-portal.git
+   git clone https://github.com/yesh2344/student-portal.git
    ```
    
 2. Open the `index.html` file in your web browser
